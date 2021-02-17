@@ -1,0 +1,95 @@
+{
+  "name": "auro-blog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@alaskaairux/auro-accordion": "^1.0.0",
+    "@alaskaairux/auro-alerts": "^1.2.1",
+    "@alaskaairux/auro-avatar": "^2.0.0",
+    "@alaskaairux/auro-button": "^6.0.0",
+    "@alaskaairux/auro-carousel": "^1.2.4",
+    "@alaskaairux/auro-checkbox": "^1.1.1",
+    "@alaskaairux/auro-datetime": "^1.1.0",
+    "@alaskaairux/auro-dialog": "^1.3.0",
+    "@alaskaairux/auro-header": "^1.4.0",
+    "@alaskaairux/auro-hyperlink": "^2.0.1",
+    "@alaskaairux/auro-icon": "^3.0.0",
+    "@alaskaairux/auro-input": "^1.1.1",
+    "@alaskaairux/auro-loader": "^1.0.0",
+    "@alaskaairux/auro-lockup": "^1.0.0",
+    "@alaskaairux/auro-pane": "^1.1.1",
+    "@alaskaairux/auro-popover": "^1.1.2",
+    "@alaskaairux/auro-radio": "^1.2.0",
+    "@alaskaairux/auro-table": "^1.0.0",
+    "@alaskaairux/design-tokens": "^3.0.0",
+    "@alaskaairux/icons": "^4.0.7",
+    "@alaskaairux/orion-design-tokens": "^2.12.3",
+    "@alaskaairux/orion-icons": "^2.1.5",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.12.2",
+    "@alaskaairux/webcorestylesheets": "^3.0.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "apollo-boost": "^0.4.9",
+    "focus-visible": "^5.2.0",
+    "graphql": "^15.4.0",
+    "husky": "^4.3.6",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-highlight": "^0.13.0",
+    "react-markdown": "^5.0.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.1",
+    "react-scroll": "^1.8.1",
+    "react-syntax-highlighter": "^15.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"No tests specified\" && exit 0",
+    "eject": "react-scripts eject",
+    "rebuildSass": "npm rebuild node-sass",
+    "buildPages": "node ./scripts/build-page-imports.js",
+    "buildAppJs": "node ./scripts/build-appjs.js",
+    "generate": "npm-run-all buildPages buildAppJs",
+    "dev": "npm-run-all rebuildSass generate start"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 edge version",
+      "ie 11",
+      "last 2 safari major version"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 edge version",
+      "ie 11",
+      "last 2 safari major version"
+    ]
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "marked": "^1.2.7",
+    "npm-run-all": "^4.1.5",
+    "prismjs": "^1.23.0",
+    "svg-react-loader": "^0.4.6"
+  }
+}

@@ -1,0 +1,34 @@
+/* index.scss */
+
+/* Auro tokens */
+@import "~@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+
+// Auro imports
+/* ------------------------ OWCSS imports ------------------------ */
+@import "~@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import "~@alaskaairux/webcorestylesheets/dist/fonts";
+@import "~@alaskaairux/webcorestylesheets/dist/componentSupport/tablist";
+@import "~@alaskaairux/webcorestylesheets/dist/componentSupport/containedButtons";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/layoutProperties";
+
+// Auro typography
+/* ------------------------ Auro typography ------------------------ */
+$prefix: true;
+$paragraph: true;
+@import "~@alaskaairux/webcorestylesheets/dist/essentials";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/fontStyles";
+@import "~@alaskaairux/webcorestylesheets/dist/headings";
+$prefix: null;
+
+// Auro Selector generators
+/* ------------------------ Auro Selector generators ------------------------ */
+@import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/_layoutPropertiesGenerator";
+
+$auro-spacing-types: stack;
+$important: true;
+@import "~@alaskaairux/design-tokens/dist/tokens/SCSSVariableMap";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/spacingUtility";
+
+// Table
+/* ------------------------ Table ------------------------ */
+@import "~@alaskaairux/webcorestylesheets/dist/componentSupport/table";
